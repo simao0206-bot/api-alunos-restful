@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Alunos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Gestão de Alunos</h1>
+
+    <section class="cartao">
+      <h2 id="titulo-form">Adicionar aluno</h2>
+      <form id="form-aluno" class="linha-form">
+        <input type="hidden" id="aluno-id">
+        <input type="text" id="nome" placeholder="Nome" aria-label="Nome" required>
+        <input type="text" id="apelido" placeholder="Apelido" aria-label="Apelido" required>
+        <select id="curso" aria-label="Curso" required></select>
+        <input type="number" id="ano" placeholder="Ano (1-3)" aria-label="Ano curricular" min="1" max="3" required>
+        <input type="number" id="idade" placeholder="Idade" aria-label="Idade" min="15" max="100" required>
+        <button type="submit" id="btn-guardar" class="btn btn-primario">Adicionar</button>
+        <button type="button" id="btn-cancelar" class="btn btn-neutro" hidden>Cancelar</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Apelido</th>
+            <th>Curso</th>
+            <th>Ano</th>
+            <th>Idade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-alunos"></tbody>
+      </table>
+    </section>
+
+    <h1>Gestão de Cursos</h1>
+
+    <section class="cartao">
+      <h2 id="titulo-form-curso">Adicionar curso</h2>
+      <form id="form-curso" class="linha-form">
+        <input type="hidden" id="curso-id">
+        <input type="text" id="nome-curso" placeholder="Nome do curso" aria-label="Nome do curso" class="campo-largo" required>
+        <button type="submit" id="btn-guardar-curso" class="btn btn-primario">Adicionar</button>
+        <button type="button" id="btn-cancelar-curso" class="btn btn-neutro" hidden>Cancelar</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <table>
+        <thead>
+          <tr>
+            <th>Curso</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-cursos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

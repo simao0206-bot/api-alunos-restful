@@ -1,0 +1,146 @@
+{
+  "info": {
+    "_postman_id": "ee5b781a-3240-494e-9aa5-189c213dbd5b",
+    "name": "API Alunos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58759049",
+    "_collection_link": "https://go.postman.co/collection/58759049-ee5b781a-3240-494e-9aa5-189c213dbd5b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "obter alunos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/alunos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "alunos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "obter aluno por id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/alunos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "alunos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "obter cursos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/cursos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "cursos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "criar aluno",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Sofia\",\r\n  \"apelido\": \"Pereira\",\r\n  \"idCurso\": 1,\r\n  \"anoCurricular\": 1,\r\n  \"idade\": 18\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3003/alunos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "alunos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "editar aluno",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Sofia\",\r\n  \"apelido\": \"Pereira\",\r\n  \"idCurso\": 1,\r\n  \"anoCurricular\": 2,\r\n  \"idade\": 19\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3003/alunos/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "alunos",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "apagar aluno",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/alunos/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "alunos",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

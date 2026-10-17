@@ -1,0 +1,98 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Joana",
+      "apelido": "Silva",
+      "idCurso": 1,
+      "anoCurricular": 2,
+      "idade": 21
+    },
+    {
+      "id": 2,
+      "nome": "Miguel",
+      "apelido": "Costa",
+      "idCurso": 2,
+      "anoCurricular": 1,
+      "idade": 19
+    },
+    {
+      "id": 3,
+      "nome": "Inês",
+      "apelido": "Ferreira",
+      "idCurso": 1,
+      "anoCurricular": 3,
+      "idade": 22
+    },
+    {
+      "id": 4,
+      "nome": "Rui",
+      "apelido": "Almeida",
+      "idCurso": 7,
+      "anoCurricular": 2,
+      "idade": 20
+    },
+    {
+      "id": 5,
+      "nome": "Sofia",
+      "apelido": "Pereira",
+      "idCurso": 11,
+      "anoCurricular": 2,
+      "idade": 19
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nomeDoCurso": "Engenharia da Computação Gráfica e Multimédia"
+    },
+    {
+      "id": 2,
+      "nomeDoCurso": "Engenharia de Redes e Sistemas de Computadores"
+    },
+    {
+      "nomeDoCurso": "Design de Ambientes",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nomeDoCurso": "Design do Produto"
+    },
+    {
+      "id": 6,
+      "nomeDoCurso": "Engenharia Civil e do Ambiente"
+    },
+    {
+      "id": 7,
+      "nomeDoCurso": "Engenharia Informática"
+    },
+    {
+      "id": 8,
+      "nomeDoCurso": "Engenharia Mecânica"
+    },
+    {
+      "id": 9,
+      "nomeDoCurso": "Engenharia Mecatrónica"
+    },
+    {
+      "id": 10,
+      "nomeDoCurso": "Gastronomia e Artes Culinárias"
+    },
+    {
+      "id": 11,
+      "nomeDoCurso": "Gestão"
+    },
+    {
+      "id": 12,
+      "nomeDoCurso": "Tecnologia Alimentar e Nutrição"
+    },
+    {
+      "id": 13,
+      "nomeDoCurso": "Turismo"
+    },
+    {
+      "nomeDoCurso": "Engenharia Alimentar",
+      "id": 14
+    }
+  ]
+}

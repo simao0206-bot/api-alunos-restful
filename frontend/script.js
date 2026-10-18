@@ -1,6 +1,6 @@
-// Vazio = os pedidos vão para o mesmo servidor que serve esta página (a API em Express).
-// Na Parte 5, se o front-end ficar noutro endereço, este valor passa a ser o URL da API.
-const API_URL = '';
+const API_URL = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+  ? ''
+  : 'https://api-alunos-restful.onrender.com';
 const JSON_HEADERS = { 'Content-Type': 'application/json' };
 
 // ---------- Elementos da página ----------

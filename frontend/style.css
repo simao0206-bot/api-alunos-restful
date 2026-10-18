@@ -104,3 +104,18 @@ td .btn {
   color: #6b7280;
   text-align: center;
 }
+
+.cartao {
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+
+  th, td {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.9rem;
+  }
+}

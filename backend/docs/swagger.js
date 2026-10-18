@@ -1,10 +1,7 @@
-// Descrição da API em formato OpenAPI 3.0.
-// Pequenas funções auxiliares, só para não repetir texto
 const json = (esquema) => ({ 'application/json': { schema: esquema } });
 const ref = (nome) => ({ $ref: `#/components/schemas/${nome}` });
 const refResposta = (nome) => ({ $ref: `#/components/responses/${nome}` });
 
-// O id vem no URL (/alunos/:id
 const parametroId = {
   name: 'id',
   in: 'path',
@@ -13,7 +10,6 @@ const parametroId = {
   schema: { type: 'string', example: '6ad39f48855f74686e3b77d2' }
 };
 
-// Campos do aluno (os mesmos do modelo Aluno.js,)
 const camposAluno = {
   nome: { type: 'string', example: 'Joana' },
   apelido: { type: 'string', example: 'Silva' },

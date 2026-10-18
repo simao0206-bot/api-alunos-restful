@@ -1,4 +1,3 @@
-// API implementada
 const path = require('path');
 const fs = require('fs');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
@@ -11,34 +10,31 @@ const swaggerSpec = require('./docs/swagger');
 
 const app = express();
 
-// Middlewares: correm em todos os pedidos, antes das rotas
-app.use(cors());          // deixa o front-end, noutro endereço, fazer pedidos a esta API
-app.use(express.json());  // converte o JSON do corpo do pedido em req.body
+app.use(cors());          
+app.use(express.json());  
 
-// Documentação Swagger em /api-docs
+// Documentação Swagger 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Rota de teste: confirma que a API está viva
 app.get('/saude', (req, res) => {
   res.json({ mensagem: 'API de Alunos a funcionar' });
 });
 
-// Serve também a página para testar tudo no mesmo endereço. Se a pasta não existir -> ignora
 const pastaFrontend = path.join(__dirname, '..', 'frontend');
 if (fs.existsSync(pastaFrontend)) {
   app.use(express.static(pastaFrontend));
 }
 
-// Rotas da API: tudo o que começa por /alunos ou /cursos vai para o router respetivo
+// Rotas da API
 app.use('/alunos', require('./routes/alunoRoutes'));
 app.use('/cursos', require('./routes/cursoRoutes'));
 
-// Rota inexistente: responde em JSON em vez da página HTML por defeito do Express
+// Respostas para Rotas inexistentes
 app.use((req, res) => {
   res.status(404).json({ erro: 'Rota não encontrada' });
 });
 
-// Último middleware: apanha erros (ex.: JSON mal formado no corpo)
+// Tratamento de erros
 app.use((erro, req, res, next) => {
   if (erro.type === 'entity.parse.failed') {
     return res.status(400).json({ erro: 'JSON inválido no corpo do pedido' });

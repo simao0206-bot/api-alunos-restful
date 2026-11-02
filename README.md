@@ -91,3 +91,7 @@ Para carregar os dados de `mock-data/bd.json` para uma base vazia: `npm run migr
 - **Arquitetura:** MVC com Mongoose (models, controllers e routes).
 - **Testes:** `tests/postman-collection.json` cobre a API simulada (CRUD de alunos e leitura de cursos).
 - **Front-end:** a versão final está preparada para a API real. Em `localhost` usa o servidor local e noutro endereço usa a API no Render.
+
+## Utilização de IA
+
+Foi utilizada inteligência artificial (Claude, da Anthropic) neste trabalho: para gerar/corrigir código, fornecer orientação na configuração das ferramentas e para explicação de conceitos.
